@@ -1,0 +1,8 @@
+<h3>Inactive Users</h3>
+<ul class="list-group">
+  <ng-container *ngFor="let user of users">
+    <li *ngIf="!user?.isActive" class="list-group-item"> {{ user.name}} |
+       <button (click)="onSetToActive(user?.id)">Set to Active</button>
+    </li>
+  </ng-container>
+</ul>
